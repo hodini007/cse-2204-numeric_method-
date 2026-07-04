@@ -1,7 +1,6 @@
 """
 Experiment 9: Iteration Method for Systems of Nonlinear Equations
 ====================================================================
-Solves all exercise problems from Section 11 (Exercise 9) of the lab manual.
 
 For each system f(x,y)=0, g(x,y)=0, we rearrange it as x=F(x,y), y=G(x,y)
 choosing the branch/form that keeps |Fx|+|Fy|<1 and |Gx|+|Gy|<1 near the
