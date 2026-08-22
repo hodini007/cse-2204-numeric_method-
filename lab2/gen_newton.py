@@ -26,6 +26,7 @@ def generalized_newton(f, fprime, p, x0, tol=1e-6, N=100, verbose=True):
     return x1
 
 
+
 def newton_raphson(f, fprime, x0, tol=1e-6, N=100, verbose=False):
     """Plain Newton (p=1), used for Q11 comparison."""
     x1 = x0

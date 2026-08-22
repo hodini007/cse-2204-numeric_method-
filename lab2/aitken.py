@@ -25,6 +25,9 @@ def aitken(phi, x0, tol=1e-4, N=100, verbose=True):
     return x_hat
 
 
+
+
+
 def aitken_step(x0, x1, x2):
     """One Aitken step given three raw iterates (no phi needed)."""
     denom = x2 - 2 * x1 + x0
