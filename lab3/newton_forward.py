@@ -13,7 +13,7 @@ def forward_diff_table(y):
 def print_diff_table(x, y):
     D = forward_diff_table(y)
     n = len(y)
-    
+
     header = "x\ty"
     for k in range(1, n):
         header += f"\tD^{k}"
