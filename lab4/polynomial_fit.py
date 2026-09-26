@@ -30,4 +30,5 @@ def polynomial_fit(points):
     a2 = coeffs[2, 0]
     return a0, a1, a2
 
-print(polynomial_fit(points))
+if __name__ == "__main__":
+    print(polynomial_fit(points))

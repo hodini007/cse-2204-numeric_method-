@@ -1,6 +1,6 @@
 # Numeric Methods Collection
 
-This folder contains Python implementations of classic numerical methods used in the coursework labs. Each script is written as a self-contained example runner with worked problems and printed iteration tables.
+This folder contains Python implementations of classic numerical methods used in the coursework labs. The methods can be imported as a package, while the original scripts remain available as worked examples.
 
 ## Contents
 
@@ -15,12 +15,36 @@ This folder contains Python implementations of classic numerical methods used in
 - `lab2/gen_newton.py` - generalized Newton-style examples
 - `lab2/ramanujan.py` - Ramanujan-related numerical experiment
 
-`lab3/` is currently empty.
+## Importing the package
+
+From the repository root, install it once in editable mode:
+
+```bash
+python3 -m pip install -e .
+```
+
+Then import methods in any Python file:
+
+```python
+from numeric import bisection, newton_raphson, lagrange, straight_line_fit
+
+root = bisection(lambda x: x**2 - 2, 0, 2, verbose=False)
+value = lagrange([0, 1], [0, 1], 0.25)
+line = straight_line_fit([(1, 2), (2, 4), (3, 6)])
+```
+
+Lab-specific imports are also available:
+
+```python
+from numeric.lab2 import secant
+from numeric.lab3 import newton_forward
+from numeric.lab4 import polynomial_fit
+```
 
 ## Requirements
 
 - Python 3.8 or later
-- Standard library only (`math` is the main dependency)
+- NumPy (used by the curve-fitting methods in `lab4`)
 
 ## How to Run
 
@@ -39,7 +63,7 @@ Most scripts print the iteration steps and the final approximate root for severa
 
 - The scripts are organized by method, not by input/output library structure.
 - Several files are classroom exercises, so the same method may appear in multiple variations.
-- If you want to reuse a method in another program, copy the core function from the corresponding file and import it into your own script.
+- Import reusable functions from `numeric` or one of its lab packages instead of copying code.
 
 ## Suggested Workflow
 

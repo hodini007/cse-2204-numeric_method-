@@ -32,4 +32,5 @@ def least_square(points):
 
     return a0,a1,cc
 
-print(least_square(points))
+if __name__ == "__main__":
+    print(least_square(points))

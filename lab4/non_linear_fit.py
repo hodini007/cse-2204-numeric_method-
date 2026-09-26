@@ -32,5 +32,6 @@ def non_linear_fit(points, g, h, recover):
 
 X = lambda x, y: x
 Y = lambda x, y: math.log(y)
-result = non_linear_fit(points, X, Y, lambda a0, a1: (math.exp(a0), a1))
-print(result)
+if __name__ == "__main__":
+    result = non_linear_fit(points, X, Y, lambda a0, a1: (math.exp(a0), a1))
+    print(result)
